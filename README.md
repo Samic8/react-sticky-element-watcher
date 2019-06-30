@@ -2,6 +2,11 @@
 
 The CSS property `position: sticky` lacks an `:active` pseudo-class for apply styles when a element is "stuck".
 
+## Installation
+```
+npm install react-sticky-element-watcher
+```
+
 ## Usage
 ```js
 import React from 'React'
