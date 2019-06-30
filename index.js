@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 
-export default StickyHeaderWatcher = (props) => {
+export default StickyElementWatcher = (props) => {
   const [isStuck, setIsStuck] = useState(false)
   const sentinalEl = React.createRef()
   
