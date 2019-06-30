@@ -1,8 +1,8 @@
 {
   "name": "react-sticky-element-watcher",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "React component for listening to the stuck state of a position sticky element",
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "author": "Sam Dawson",
   "license": "MIT",
   "keywords": [
@@ -12,14 +12,13 @@
     "styling"
   ],
   "scripts": {
-    "start": "webpack --watch",
-    "build": "webpack"
+    "build": "webpack",
+    "prepublish": "rm -rf ./dist && npm run build"
   },
   "peerDependencies": {
-    "react": "^16.8.6"
+    "react": "^16.4.6"
   },
   "dependencies": {
-    "react": "^16.8.6",
     "webpack": "^4.35.0"
   },
   "devDependencies": {
@@ -28,6 +27,9 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.7.0"
+    "babel-preset-env": "^1.7.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "webpack-cli": "^3.3.5"
   }
 }
