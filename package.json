@@ -1,6 +1,6 @@
 {
   "name": "react-sticky-element-watcher",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React component for listening to the stuck state of a position sticky element",
   "main": "build/index.js",
   "author": "Sam Dawson",
