@@ -1,6 +1,6 @@
 # React Sticky Element Watcher
 
-The CSS property `position: sticky` lacks an `:active` pseudo-class for apply styles when a element is "stuck".
+The CSS property `position: sticky` lacks an `:active` pseudo-class for applying styles when a element is "stuck".
 
 ## Installation
 ```
