@@ -5,6 +5,8 @@ export default (props) => {
   const sentinalEl = React.createRef()
   
   useEffect(() => {
+    if (!window) return;
+
     const handler = (entries) => {
       setIsStuck(!entries[0].isIntersecting)
     }
