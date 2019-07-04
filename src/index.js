@@ -1,9 +1,24 @@
-import React, {Component} from 'react'
+import React, {useState, useEffect} from 'react'
 
-export default class extends Component {
-  render() {
-    return <div>
-      <h2>Welcome to React components</h2>
-    </div>
-  }
+export default (props) => {
+  const [isStuck, setIsStuck] = useState(false)
+  const sentinalEl = React.createRef()
+  
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const handler = (entries) => {
+      setIsStuck(!entries[0].isIntersecting)
+    }
+
+    const observer = new window.IntersectionObserver(handler)
+    observer.observe(sentinalEl.current)
+  }, [])
+
+  return (
+    <React.Fragment>
+      <div ref={sentinalEl} />
+      {props.render({isStuck})}
+    </React.Fragment>
+  )
 }

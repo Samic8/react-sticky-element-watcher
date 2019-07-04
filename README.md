@@ -1,16 +1,28 @@
-# react-sticky-element-watcher
+# React Sticky Element Watcher
 
-[![Travis][build-badge]][build]
-[![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+The CSS property `position: sticky` lacks an `:active` pseudo-class for applying styles when a element is "stuck".
 
-Describe react-sticky-element-watcher here.
+## Installation
+```
+npm install react-sticky-element-watcher
+```
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
+## Usage
+```js
+import React from 'React'
+import StickyElementWatcher from 'react-sticky-element-watcher'
 
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
-
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+export default () => (
+    <StickyElementWatcher
+        render={({ isStuck }) => (
+            <nav style={{
+                position: 'sticky',
+                top: '10px',
+                backgroundColor: isStuck ? 'red' : 'white'
+            }}>
+                Logo: link1, link2
+            </nav>
+        )}
+    />
+)
+```
